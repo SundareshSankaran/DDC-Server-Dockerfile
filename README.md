@@ -23,5 +23,5 @@ Enjoy!
 
 ## Support and Contact
 
-For questions regarding the Docker and application, feel free to get in touch with sundaresh.sankaran@sas.com, or @SundareshSankaran.
+For questions regarding the Docker and application, feel free to get in touch with sundaresh.sankaran@sas.com, or @github.com/SundareshSankaran.
 
