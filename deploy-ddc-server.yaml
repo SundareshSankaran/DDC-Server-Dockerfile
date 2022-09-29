@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{CONTAINER_NAME}}
+  namespace: {{YOUR_DESIRED_NAMESPACE}}
+spec:
+  selector:
+    matchLabels:
+      app: {{CONTAINER_NAME}}
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: {{CONTAINER_NAME}}
+    spec:
+      containers:
+      - name: {{CONTAINER_NAME}}
+        image: {{YOUR_CR}}/{{CONTAINER_NAME}}:{{TAG}}
+        imagePullPolicy: Always
+        ports:
+        - name: https
+          containerPort: 8080
+          protocol: TCP
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{YOUR_SERVICE_NAME}}
+  namespace: {{YOUR_DESIRED_NAMESPACE}}
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 8080
+    targetPort: 8080
+    protocol: TCP
+  selector:
+    app: {{CONTAINER_NAME}}
+
