@@ -3,6 +3,11 @@
 ## Overview
 The [DDC Server](https://github.com/sassoftware/sas-visualanalytics-thirdpartyvisualizations/tree/master/ddc-server) is a lightweight deployment which provides a range of third-party visualizations to be accessed from within SAS Visual Analytics.  This deployment, served over Kubernetes or as a Docker image, is based on a Flask web application.  This repository provides you the Flask web application and a Dockerfile, which you can use to build your own DDC Server.
 
+# Requirements
+
+1. Python - version 3.10 + or higher preferred
+2. Take a look at the [requirements.txt](/ddc/requirements.txt) for the flask app. 
+
 
 ## Instructions
 
